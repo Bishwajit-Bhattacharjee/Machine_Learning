@@ -16,6 +16,9 @@ p = zeros(size(X, 1), 1);
 
 % Add ones to the X data matrix
 X = [ones(m, 1) X];
+mx = zeros(p);
+
+pp = zeros(p);
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Complete the following code to make predictions using
@@ -29,13 +32,17 @@ X = [ones(m, 1) X];
 %       are in rows, then, you can use max(A, [], 2) to obtain the max 
 %       for each row.
 %       
-
-
-
-
-
-
-
+    [~, p] = max(sigmoid(all_theta*X'));
+    
+    predict = sigmoid(X*all_theta'); % 5000 * 401 by 401*10
+    [~, pp] = max(predict, [], 2);
+    
+    %size(p)
+    %size(pp)
+    
+    %length(p) - sum(p==pp')
+    p = p';
+    
 % =========================================================================
 
 
