@@ -3,7 +3,7 @@
 %
 %  Instructions
 %  ------------
-% 
+% ex4
 %  This file contains code that helps you get started on the
 %  exercise. You will need to complete the following functions:
 %
@@ -164,7 +164,7 @@ pause;
 %  lambda to see how the fit and learning curve change.
 %
 
-lambda = 0;
+lambda = 100;
 [theta] = trainLinearReg(X_poly, y, lambda);
 
 % Plot training data and fit
